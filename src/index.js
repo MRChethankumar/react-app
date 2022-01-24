@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AppRoutes from './AppRoutes';
+import { ThemeProvider } from '@mui/styles';
+import { theme } from './themes/MyTheme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRoutes/>
+    <ThemeProvider theme={theme}>
+      <AppRoutes/>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

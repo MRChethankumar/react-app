@@ -27,10 +27,14 @@ function App() {
   }
 
   const logOut = async ()=>{
+    let csrftoken = document.cookie.split('; ').find(row => row.startsWith('csrftoken=')).split('=')[1];
 
     try{
       let response = await fetch("http://localhost:8000/api/account/logout", 
-      {credentials:'include'});
+      { method:'POST',
+        headers : {'X-CSRFToken': csrftoken},
+        credentials:'include'
+      });
       let data = await response.json();
       navigate('/signin');
     }

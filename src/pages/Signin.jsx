@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 
-import {authenticate} from '../providers/Backend';
+import {authenticate} from '../http/Backend';
 
 function Signin(props) {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import { useQuery } from '../helpers/Hooks';
+import { useQuery } from '../utils/Hooks';
 
 
 function Home(props) {
